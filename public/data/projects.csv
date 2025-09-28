@@ -1,0 +1,10 @@
+title,description,category,year,tags,github,live,status,featured,metrics
+EcoTrack - Sustainability App,A comprehensive sustainability tracking app that helps users monitor their carbon footprint and set eco-friendly goals.,Mobile App,2024,"React Native,Node.js,MongoDB",#,#,Live,TRUE,"features:5,responsive:Yes,tests:90%",https://via.placeholder.com/400x300/10b981/ffffff?text=EcoTrack
+TaskFlow - Project Management,An intuitive project management platform with real-time collaboration and advanced analytics for teams.,Web App,2023,"Next.js,TypeScript,PostgreSQL",#,#,Live,TRUE,"",https://via.placeholder.com/400x300/059669/ffffff?text=TaskFlow
+Personal Blog,My personal blog built with Next.js and hosted on Vercel,Blog,2023,"Next.js,Tailwind CSS,MDX",#,#,Live,FALSE,"",
+E-Commerce Dashboard,Admin dashboard for managing online store with real-time analytics and inventory tracking.,Dashboard,2023,"React,Node.js,Express",#,#,Live,FALSE,"sales:15K,users:250",
+"TaskFlow - Project Management","An intuitive project management platform with real-time collaboration, advanced analytics, and integrated time tracking for teams.","Web App","2023","Next.js|TypeScript|PostgreSQL|Prisma|Tailwind CSS","#","#","Live","TRUE","pages:12|tests:95%|performance:90%"
+"AI Content Generator","A smart content generation tool powered by AI that helps marketers create engaging social media posts, blog articles, and ad copy.","SaaS","2024","React|Python|FastAPI|OpenAI API|Stripe","#","#","Beta","TRUE","accuracy:95%|models:3|languages:5"
+"Recipe Finder App","Discover recipes based on ingredients you have at home. Features meal planning, shopping lists, and nutritional information.","Mobile App","2023","Flutter|Firebase|Spoonacular API","#","#","Live","FALSE",""
+"Crypto Portfolio Tracker","Real-time cryptocurrency portfolio tracking with advanced analytics, price alerts, and news integration.","Web App","2022","Vue.js|Chart.js|CoinGecko API","#","#","Live","FALSE",""
+"Weather Forecast Dashboard","Beautiful weather dashboard with detailed forecasts, interactive maps, and severe weather alerts.","Web App","2022","React|D3.js|OpenWeather API","#","#","Live","FALSE",""

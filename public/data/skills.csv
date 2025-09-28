@@ -1,0 +1,17 @@
+skill,category,level
+"React.js","Frontend",5
+"Next.js","Frontend",5
+"Vue.js","Frontend",4
+"TypeScript","Language",5
+"Node.js","Backend",4
+"Express.js","Backend",4
+"PostgreSQL","Database",4
+"MongoDB","Database",3
+"Redis","Database",3
+"Docker","DevOps",4
+"AWS","Cloud",4
+"Vercel","Deployment",5
+"Figma","Design",3
+"Git","Version Control",5
+"Jest","Testing",4
+"Tailwind CSS","Styling",5
