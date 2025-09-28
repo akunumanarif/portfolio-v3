@@ -3,10 +3,14 @@
 import { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { Menu, X, Github, Linkedin, Mail, Download, Code} from 'lucide-react'
+import { fetchDownloadData } from '../../lib/spreadsheet'
+import { handleFilePreview } from '../../lib/downloadUtils'
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false)
   const [scrolled, setScrolled] = useState(false)
+  const [downloadData, setDownloadData] = useState(null)
+  const [loading, setLoading] = useState(true)
 
   const navItems = [
     { name: 'Home', href: '#home' },
@@ -22,6 +26,27 @@ export default function Navbar() {
     }
     window.addEventListener('scroll', handleScroll)
     return () => window.removeEventListener('scroll', handleScroll)
+  }, [])
+
+  useEffect(() => {
+    async function loadDownloadData() {
+      try {
+        const data = await fetchDownloadData()
+        setDownloadData(data[0]) // Ambil item pertama (resume)
+      } catch (error) {
+        console.error('Error loading download data:', error)
+        // Fallback data
+        setDownloadData({
+          label: 'Resume',
+          url: 'https://drive.google.com/file/d/1ZFD1fcVhMDdzdCZS8hUBSEWbYwIeK075/view?usp=sharing',
+          filename: 'Resume.pdf'
+        })
+      } finally {
+        setLoading(false)
+      }
+    }
+
+    loadDownloadData()
   }, [])
 
   const scrollToSection = (href) => {
@@ -77,12 +102,14 @@ export default function Navbar() {
           {/* CTA Button */}
           <div className="hidden md:flex items-center space-x-4">
             <motion.button
+              onClick={() => downloadData?.url && handleFilePreview(downloadData.url)}
               whileHover={{ scale: 1.05, y: -2 }}
               whileTap={{ scale: 0.95 }}
-              className="btn-primary flex items-center space-x-2"
+              disabled={loading || !downloadData?.url}
+              className="btn-primary flex items-center space-x-2 disabled:opacity-50 disabled:cursor-not-allowed"
             >
               <Download size={16} />
-              <span>Resume</span>
+              <span>{loading ? 'Loading...' : (downloadData?.label || 'Resume')}</span>
             </motion.button>
           </div>
 
@@ -124,12 +151,14 @@ export default function Navbar() {
               ))}
               <div className="px-3 py-2">
                 <motion.button
+                  onClick={() => downloadData?.url && handleFilePreview(downloadData.url)}
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.98 }}
-                  className="btn-primary w-full flex items-center justify-center space-x-2"
+                  disabled={loading || !downloadData?.url}
+                  className="btn-primary w-full flex items-center justify-center space-x-2 disabled:opacity-50 disabled:cursor-not-allowed"
                 >
                   <Download size={16} />
-                  <span>Download Resume</span>
+                  <span>{loading ? 'Loading...' : `Download ${downloadData?.label || 'Resume'}`}</span>
                 </motion.button>
               </div>
             </div>

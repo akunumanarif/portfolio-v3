@@ -178,8 +178,14 @@ export default function ExperienceSection() {
               <div className="space-y-4">
                 <div>
                   <h4 className="font-semibold text-primary-800">Bachelor of Computer Science</h4>
-                  <p className="text-primary-600 text-sm">University of Indonesia</p>
-                  <p className="text-primary-500 text-sm">2015 - 2019</p>
+                  <p className="text-primary-600 text-sm">University of Merdeka Pasuruan</p>
+                </div>
+              </div>
+
+              <div className="space-y-4">
+                <div>
+                  <h4 className="font-semibold text-primary-800">Backend Java Spring Boot Expert</h4>
+                  <p className="text-primary-600 text-sm">Alterra Academy Bootcamp</p>
                 </div>
               </div>
             </motion.div>
