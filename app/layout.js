@@ -1,7 +1,7 @@
 import './globals.css'
 
 export const metadata = {
-  title: 'John Doe - Software Engineer',
+  title: 'Arif - Software Engineer',
   description: 'Elegant portfolio showcasing modern web development skills and creative projects',
   keywords: 'software engineer, portfolio, web development, frontend, backend, full-stack',
 }
