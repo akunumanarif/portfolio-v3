@@ -42,8 +42,13 @@ body {
 
 /* Section styling */
 .section {
-  min-height: 100vh;
   position: relative;
+}
+
+@media (min-width: 768px) {
+  .section {
+    min-height: 100vh;
+  }
 }
 
 /* Glass effect */
